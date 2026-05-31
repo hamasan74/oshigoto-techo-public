@@ -9,6 +9,7 @@ All notable changes to this public edition are documented here.
 - Pull request template, CODEOWNERS, and CodeQL workflow for visible review and security maintenance.
 - Reviewer guide, local demo walkthrough, and support policy documentation.
 - GitHub milestones for near-term maintenance and public usability planning.
+- GitHub Actions Node 24 opt-in for CI and CodeQL workflows.
 
 ### Changed
 
