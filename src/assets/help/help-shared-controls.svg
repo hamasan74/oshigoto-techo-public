@@ -1,0 +1,35 @@
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" rx="32" fill="#F6F8FB"/>
+  <rect x="32" y="28" width="896" height="484" rx="32" fill="#FFFDFC" stroke="#D9E3EC" stroke-width="2"/>
+
+  <rect x="74" y="70" width="812" height="210" rx="30" fill="#FBFDFE" stroke="#D9E3EC" stroke-width="2"/>
+  <text x="106" y="114" fill="#6C8294" font-family="'Meiryo UI', sans-serif" font-size="20" font-weight="700" letter-spacing="0.12em">HEADER</text>
+
+  <rect x="106" y="136" width="748" height="104" rx="24" fill="#FFFFFF" stroke="#D9E3EC" stroke-width="2"/>
+
+  <rect x="136" y="162" width="242" height="54" rx="18" fill="#F7FBFD" stroke="#D7E3EC" stroke-width="2"/>
+  <circle cx="164" cy="189" r="9" fill="#F57B63"/>
+  <circle cx="192" cy="189" r="9" fill="#F4C84F"/>
+  <circle cx="220" cy="189" r="9" fill="#7CCB83"/>
+  <rect x="246" y="171" width="42" height="36" rx="10" fill="#E8F4F7"/>
+  <rect x="257" y="179" width="20" height="20" rx="5" fill="#2E6E74"/>
+  <rect x="304" y="176" width="66" height="9" rx="4.5" fill="#3A6F74"/>
+  <rect x="304" y="194" width="54" height="9" rx="4.5" fill="#2B2F33"/>
+
+  <rect x="562" y="150" width="124" height="40" rx="14" fill="#FFFFFF" stroke="#CBD8E4" stroke-width="2"/>
+  <rect x="704" y="150" width="138" height="40" rx="14" fill="#FFFFFF" stroke="#CBD8E4" stroke-width="2"/>
+  <rect x="562" y="198" width="124" height="40" rx="14" fill="#FFFFFF" stroke="#CBD8E4" stroke-width="2"/>
+  <rect x="704" y="198" width="138" height="40" rx="14" fill="#FFFFFF" stroke="#CBD8E4" stroke-width="2"/>
+
+  <text x="624" y="176" text-anchor="middle" fill="#29495B" font-family="'Meiryo UI', sans-serif" font-size="16" font-weight="700">1 表示設定</text>
+  <text x="773" y="176" text-anchor="middle" fill="#29495B" font-family="'Meiryo UI', sans-serif" font-size="16" font-weight="700">2 利用者</text>
+  <text x="624" y="224" text-anchor="middle" fill="#29495B" font-family="'Meiryo UI', sans-serif" font-size="16" font-weight="700">3 ヘルプ</text>
+  <text x="773" y="224" text-anchor="middle" fill="#29495B" font-family="'Meiryo UI', sans-serif" font-size="15" font-weight="700">4 Excelエクスポート</text>
+
+  <rect x="82" y="316" width="796" height="152" rx="24" fill="#F8FBFD" stroke="#DCE6EF" stroke-width="2"/>
+  <text x="118" y="362" fill="#2E556C" font-family="'Meiryo UI', sans-serif" font-size="28" font-weight="700">ヘッダー右上の共通ボタンを拡大した簡略図です</text>
+  <text x="118" y="402" fill="#667B8B" font-family="'Meiryo UI', sans-serif" font-size="20">表示設定、利用者、ヘルプ、Excelエクスポートの役割をまとめて確認できます。</text>
+  <text x="118" y="434" fill="#667B8B" font-family="'Meiryo UI', sans-serif" font-size="20">各ページの説明には重複して書かず、このタブだけに集約しています。</text>
+
+  <text x="84" y="512" fill="#5F7384" font-family="'Meiryo UI', sans-serif" font-size="18">実画面の構成に合わせた簡略図です。番号は右の説明に対応しています。</text>
+</svg>
