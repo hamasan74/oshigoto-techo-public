@@ -40,3 +40,5 @@ Before each public release, the maintainer checks that the repository does not i
 ## Dependency Policy
 
 High-severity dependency findings should be fixed before release. Moderate findings are triaged by exploitability and upgrade risk, especially when a fix requires a breaking dependency change.
+
+The current public release gate is `npm run build`, `npm audit --audit-level=high`, and successful CodeQL analysis. Medium advisories that cannot be patched without a breaking or regressive dependency change are kept open with issue triage notes until a compatible upgrade path is available.

@@ -2,6 +2,12 @@
 
 All notable changes to this public edition are documented here.
 
+## [0.1.7] - 2026-05-31
+
+### Documentation
+
+- Documented Dependabot security update status and the remaining ExcelJS/uuid advisory triage.
+
 ## [0.1.6] - 2026-05-31
 
 ### Security
