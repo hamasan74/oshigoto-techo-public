@@ -44,7 +44,7 @@ CodeQL also runs on pushes, pull requests, and a weekly schedule for JavaScript 
 
 ## Dependency Advisory Triage
 
-The public repository has Dependabot security updates, secret scanning, push protection, CI, and CodeQL enabled.
+The public repository has Dependabot alerts, weekly Dependabot version updates, secret scanning, push protection, CI, and CodeQL enabled.
 
 As of the 0.1.7 release, the only open Dependabot alert is the medium `uuid` advisory inherited through `exceljs@4.4.0`. Dependabot reports the security update as not currently resolvable because `exceljs@4.4.0` requires `uuid@^8.3.0`, while the non-vulnerable `uuid` line starts at 14.0.0. The automated npm fix path would downgrade ExcelJS, so the issue remains tracked for an export-stack review rather than a forced breaking change.
 

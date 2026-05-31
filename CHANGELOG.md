@@ -2,6 +2,12 @@
 
 All notable changes to this public edition are documented here.
 
+## [0.1.10] - 2026-05-31
+
+### Documentation
+
+- Clarified the public dependency advisory triage notes so they match the current Dependabot alert and version-update setup.
+
 ## [0.1.9] - 2026-05-31
 
 ### Changed
