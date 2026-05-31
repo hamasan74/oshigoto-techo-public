@@ -2,6 +2,12 @@
 
 All notable changes to this public edition are documented here.
 
+## [0.1.8] - 2026-05-31
+
+### Changed
+
+- Documented and configured the unresolved ExcelJS/uuid semver-major advisory path to avoid repeated non-actionable Dependabot update failures.
+
 ## [0.1.7] - 2026-05-31
 
 ### Documentation

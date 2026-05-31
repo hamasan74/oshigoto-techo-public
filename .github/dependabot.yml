@@ -8,5 +8,9 @@ updates:
     labels:
       - maintenance
       - dependencies
+    ignore:
+      - dependency-name: uuid
+        update-types:
+          - version-update:semver-major
     commit-message:
       prefix: deps
