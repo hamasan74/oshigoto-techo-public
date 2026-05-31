@@ -2,6 +2,12 @@
 
 All notable changes to this public edition are documented here.
 
+## [0.1.9] - 2026-05-31
+
+### Changed
+
+- Merged the reviewed Dependabot patch update for `@duckdb/node-api`.
+
 ## [0.1.8] - 2026-05-31
 
 ### Changed
