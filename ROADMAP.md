@@ -4,7 +4,7 @@ This roadmap tracks maintenance work for the public source edition. It is intent
 
 ## 0.1.x Maintenance
 
-- Add public screenshots and a short walkthrough to the README.
+- Expand the public screenshots into a short walkthrough.
 - Expand setup documentation for first-time local runs.
 - Keep CI passing for TypeScript and production builds.
 - Triage dependency advisories and document upgrade decisions.

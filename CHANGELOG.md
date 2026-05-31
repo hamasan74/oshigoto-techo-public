@@ -2,6 +2,19 @@
 
 All notable changes to this public edition are documented here.
 
+## [0.1.1] - 2026-05-31
+
+### Added
+
+- Public-safe demo screenshots using synthetic `demo-user` data.
+- Architecture, maintenance, and privacy hygiene documentation.
+- README links to public maintenance docs.
+
+### Changed
+
+- Replaced personal example placeholders in the user setup dialog with generic demo values.
+- Merged reviewed Dependabot patch updates for React and TypeScript typings.
+
 ## [0.1.0] - 2026-05-31
 
 ### Added

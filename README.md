@@ -9,6 +9,12 @@ It focuses on making daily time entry faster: planned work, actual work, breaks,
 
 This public edition is a sanitized source release. It does not include private databases, worktree operations notes, company-specific setup scripts, generated files, or local helper binaries.
 
+## Screenshot
+
+The demo screenshots use synthetic local data only.
+
+![Daily input demo](docs/images/daily-input-desktop.png)
+
 ## Features
 
 - Daily plan and actual entry views
@@ -28,6 +34,9 @@ This repository is maintained as the public source edition of Oshigoto Techo.
 - Contribution guide: [CONTRIBUTING.md](CONTRIBUTING.md)
 - Security policy: [SECURITY.md](SECURITY.md)
 - Changelog: [CHANGELOG.md](CHANGELOG.md)
+- Architecture: [docs/architecture.md](docs/architecture.md)
+- Maintenance notes: [docs/maintenance.md](docs/maintenance.md)
+- Privacy and public source hygiene: [docs/privacy.md](docs/privacy.md)
 - Releases: [GitHub Releases](https://github.com/hamasan74/oshigoto-techo-public/releases)
 - Issue triage: bugs, documentation, maintenance, enhancements, and good first issues
 

@@ -1134,7 +1134,7 @@ export function UserBootstrapDialog({
                 type="text"
                 value={userId}
                 onChange={(event) => onChangeUserId(event.target.value)}
-                placeholder="hamana-a"
+                placeholder="demo-user"
                 autoComplete="off"
                 spellCheck={false}
                 disabled={isApplying}
@@ -1148,7 +1148,7 @@ export function UserBootstrapDialog({
               type="text"
               value={userName}
               onChange={(event) => onChangeUserName(event.target.value)}
-              placeholder="濱名 顕彦"
+              placeholder="Demo User"
               autoComplete="off"
               disabled={isApplying}
             />
