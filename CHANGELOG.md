@@ -2,6 +2,12 @@
 
 All notable changes to this public edition are documented here.
 
+## [0.1.4] - 2026-05-31
+
+### Changed
+
+- Updated GitHub Actions checkout and setup-node actions to v6 to remove Node 20 runtime deprecation annotations.
+
 ## [0.1.3] - 2026-05-31
 
 ### Changed
