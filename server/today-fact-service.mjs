@@ -175,17 +175,84 @@ function decodeHtmlEntities(text) {
     .replace(/&([a-z]+);/gi, (match, entity) => namedEntities[entity.toLowerCase()] ?? match);
 }
 
+const skippedTextTags = new Set(['figure', 'script', 'style', 'sup']);
+const spacingTags = new Set(['br', 'dd', 'div', 'dl', 'dt', 'li', 'ol', 'p', 'span', 'ul']);
+
+function getTagName(rawTag) {
+  const tagNameMatch = rawTag.trim().replace(/^\//, '').match(/^([a-z][\w:-]*)/i);
+  return tagNameMatch ? tagNameMatch[1].toLowerCase() : '';
+}
+
+function appendSpace(text) {
+  return text.endsWith(' ') ? text : `${text} `;
+}
+
+function htmlFragmentToText(fragment) {
+  let text = '';
+  let index = 0;
+  let skippedTag = '';
+  let skippedDepth = 0;
+
+  while (index < fragment.length) {
+    if (fragment.startsWith('<!--', index)) {
+      const commentEnd = fragment.indexOf('-->', index + 4);
+      index = commentEnd === -1 ? fragment.length : commentEnd + 3;
+      if (!skippedTag) {
+        text = appendSpace(text);
+      }
+      continue;
+    }
+
+    if (fragment[index] !== '<') {
+      if (!skippedTag) {
+        text += fragment[index];
+      }
+      index += 1;
+      continue;
+    }
+
+    const tagEnd = fragment.indexOf('>', index + 1);
+    if (tagEnd === -1) {
+      if (!skippedTag) {
+        text += fragment[index];
+      }
+      index += 1;
+      continue;
+    }
+
+    const rawTag = fragment.slice(index + 1, tagEnd).trim();
+    const tagName = getTagName(rawTag);
+    const isClosing = rawTag.startsWith('/');
+    const isSelfClosing = rawTag.endsWith('/') || tagName === 'br';
+
+    if (tagName && skippedTag) {
+      if (tagName === skippedTag && !isClosing && !isSelfClosing) {
+        skippedDepth += 1;
+      } else if (tagName === skippedTag && isClosing) {
+        skippedDepth -= 1;
+        if (skippedDepth <= 0) {
+          skippedTag = '';
+          skippedDepth = 0;
+          text = appendSpace(text);
+        }
+      }
+    } else if (tagName && skippedTextTags.has(tagName) && !isClosing && !isSelfClosing) {
+      skippedTag = tagName;
+      skippedDepth = 1;
+      text = appendSpace(text);
+    } else if (!tagName || spacingTags.has(tagName) || isClosing) {
+      text = appendSpace(text);
+    }
+
+    index = tagEnd + 1;
+  }
+
+  return text;
+}
+
 function stripHtml(fragment) {
   return decodeHtmlEntities(
-    fragment
-      .replace(/<!--[\s\S]*?-->/g, ' ')
-      .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ')
-      .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
-      .replace(/<sup\b[^>]*>[\s\S]*?<\/sup>/gi, ' ')
-      .replace(/<figure\b[^>]*>[\s\S]*?<\/figure>/gi, ' ')
-      .replace(/<br\s*\/?>/gi, ' ')
-      .replace(/<\/?(p|div|span|dl|dd|dt|ul|ol|li)\b[^>]*>/gi, ' ')
-      .replace(/<[^>]+>/g, ' ')
+    htmlFragmentToText(fragment)
       .replace(/\s+/g, ' ')
       .trim(),
   )

@@ -2,6 +2,13 @@
 
 All notable changes to this public edition are documented here.
 
+## [0.1.6] - 2026-05-31
+
+### Security
+
+- Replaced non-cryptographic UI ID randomness with Web Crypto-backed IDs.
+- Replaced regexp-based HTML tag filtering in the Wikipedia fact parser with a bounded tag scanner.
+
 ## [0.1.5] - 2026-05-31
 
 ### Changed

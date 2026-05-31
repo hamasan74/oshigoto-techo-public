@@ -269,8 +269,24 @@ export const quarterHourOptions: TimeOption[] = Array.from({ length: 96 }, (_, i
   };
 });
 
+let fallbackIdCounter = 0;
+
 function createId(prefix: string) {
-  return `${prefix}-${Math.random().toString(36).slice(2, 8)}`;
+  const cryptoApi = globalThis.crypto;
+
+  if (typeof cryptoApi?.randomUUID === 'function') {
+    return `${prefix}-${cryptoApi.randomUUID()}`;
+  }
+
+  if (typeof cryptoApi?.getRandomValues === 'function') {
+    const bytes = new Uint8Array(12);
+    cryptoApi.getRandomValues(bytes);
+    const token = Array.from(bytes, (byte) => byte.toString(16).padStart(2, '0')).join('');
+    return `${prefix}-${token}`;
+  }
+
+  fallbackIdCounter += 1;
+  return `${prefix}-${Date.now().toString(36)}-${fallbackIdCounter.toString(36)}`;
 }
 
 function cloneProjectCatalog(catalog: ProjectCatalogItem[]) {
