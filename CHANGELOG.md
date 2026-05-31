@@ -9,6 +9,7 @@ All notable changes to this public edition are documented here.
 - Public-safe demo screenshots using synthetic `demo-user` data.
 - Architecture, maintenance, and privacy hygiene documentation.
 - README links to public maintenance docs.
+- Pull request template, CODEOWNERS, and CodeQL workflow for visible review and security maintenance.
 
 ### Changed
 

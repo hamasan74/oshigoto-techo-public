@@ -31,12 +31,16 @@ Pull requests should be small enough to review quickly and should include:
 - how it was checked
 - whether it touches local data, import/export, or private-source boundaries
 
+The repository includes a pull request template and CODEOWNERS file so review expectations are visible before a change is merged.
+
 Dependency pull requests are reviewed with the same release gate:
 
 ```bash
 npm run build
 npm audit --audit-level=high
 ```
+
+CodeQL also runs on pushes, pull requests, and a weekly schedule for JavaScript and TypeScript code scanning.
 
 ## Release Flow
 

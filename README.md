@@ -1,7 +1,9 @@
 # Oshigoto Techo
 
 [![CI](https://github.com/hamasan74/oshigoto-techo-public/actions/workflows/ci.yml/badge.svg)](https://github.com/hamasan74/oshigoto-techo-public/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/hamasan74/oshigoto-techo-public/actions/workflows/codeql.yml/badge.svg)](https://github.com/hamasan74/oshigoto-techo-public/actions/workflows/codeql.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/hamasan74/oshigoto-techo-public)](https://github.com/hamasan74/oshigoto-techo-public/releases)
 
 Oshigoto Techo is a local-first work log and planning app built with React and Vite.
 
@@ -38,6 +40,7 @@ This repository is maintained as the public source edition of Oshigoto Techo.
 - Maintenance notes: [docs/maintenance.md](docs/maintenance.md)
 - Privacy and public source hygiene: [docs/privacy.md](docs/privacy.md)
 - Releases: [GitHub Releases](https://github.com/hamasan74/oshigoto-techo-public/releases)
+- Code scanning: [CodeQL workflow](https://github.com/hamasan74/oshigoto-techo-public/actions/workflows/codeql.yml)
 - Issue triage: bugs, documentation, maintenance, enhancements, and good first issues
 
 The maintainer uses issues for public roadmap tracking, pull requests for reviewable changes, and releases for source snapshots.
