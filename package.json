@@ -1,7 +1,7 @@
 {
   "name": "oshigoto-techo-public",
   "private": true,
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Local-first daily work log and planning app.",
   "license": "MIT",
   "repository": {
@@ -23,14 +23,14 @@
     "@duckdb/node-api": "^1.5.1-r.1",
     "exceljs": "^4.4.0",
     "jszip": "^3.10.1",
-    "react": "latest",
-    "react-dom": "latest"
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   },
   "devDependencies": {
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
-    "@vitejs/plugin-react": "latest",
-    "typescript": "latest",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "typescript": "^6.0.3",
     "vite": "^8.0.14"
   }
 }

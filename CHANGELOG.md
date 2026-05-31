@@ -2,6 +2,12 @@
 
 All notable changes to this public edition are documented here.
 
+## [0.1.5] - 2026-05-31
+
+### Changed
+
+- Replaced floating `latest` dependency ranges with explicit semver ranges for reproducible public installs.
+
 ## [0.1.4] - 2026-05-31
 
 ### Changed
