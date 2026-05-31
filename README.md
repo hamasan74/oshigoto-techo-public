@@ -1,5 +1,8 @@
 # Oshigoto Techo
 
+[![CI](https://github.com/hamasan74/oshigoto-techo-public/actions/workflows/ci.yml/badge.svg)](https://github.com/hamasan74/oshigoto-techo-public/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Oshigoto Techo is a local-first work log and planning app built with React and Vite.
 
 It focuses on making daily time entry faster: planned work, actual work, breaks, split time, project totals, and month-level summaries are kept in one small PWA-style interface.
@@ -16,6 +19,19 @@ This public edition is a sanitized source release. It does not include private d
 - Local-first storage through the bundled server
 - Excel backup export from the browser
 - PWA manifest and service worker assets
+
+## Maintenance
+
+This repository is maintained as the public source edition of Oshigoto Techo.
+
+- Roadmap: [ROADMAP.md](ROADMAP.md)
+- Contribution guide: [CONTRIBUTING.md](CONTRIBUTING.md)
+- Security policy: [SECURITY.md](SECURITY.md)
+- Changelog: [CHANGELOG.md](CHANGELOG.md)
+- Releases: [GitHub Releases](https://github.com/hamasan74/oshigoto-techo-public/releases)
+- Issue triage: bugs, documentation, maintenance, enhancements, and good first issues
+
+The maintainer uses issues for public roadmap tracking, pull requests for reviewable changes, and releases for source snapshots.
 
 ## Tech Stack
 
@@ -52,6 +68,17 @@ If you need a different storage location, set `OSHIGOTO_TECHO_DB_PATH` before st
 The private working repository contains additional operational notes, local machine scripts, generated artifacts, and private runtime data. Those files were intentionally excluded from this public edition.
 
 The HTML mail helper binary package is also excluded. The app can still fall back to browser-based mail composition.
+
+## Release Checks
+
+Before public releases, the maintainer runs:
+
+```bash
+npm run build
+npm audit --audit-level=high
+```
+
+The CI workflow runs the same checks on `main` and pull requests.
 
 ## License
 

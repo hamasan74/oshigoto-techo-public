@@ -1,0 +1,26 @@
+name: Maintenance task
+description: Track repository, release, dependency, or documentation maintenance.
+title: "Maintenance: "
+labels:
+  - maintenance
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What maintenance outcome should this issue produce?
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      description: List the concrete checks or changes.
+      value: |
+        - [ ] 
+        - [ ] 
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: How should the result be checked?

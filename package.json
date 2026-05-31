@@ -4,6 +4,14 @@
   "version": "0.1.0",
   "description": "Local-first daily work log and planning app.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hamasan74/oshigoto-techo-public.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hamasan74/oshigoto-techo-public/issues"
+  },
+  "homepage": "https://github.com/hamasan74/oshigoto-techo-public#readme",
   "type": "module",
   "scripts": {
     "dev": "node server/app-server.mjs --dev",
