@@ -2,6 +2,19 @@
 
 All notable changes to this public edition are documented here.
 
+## [0.1.2] - 2026-05-31
+
+### Added
+
+- Pull request template, CODEOWNERS, and CodeQL workflow for visible review and security maintenance.
+- Reviewer guide, local demo walkthrough, and support policy documentation.
+- GitHub milestones for near-term maintenance and public usability planning.
+
+### Changed
+
+- Merged reviewed Dependabot patch updates for React DOM, Vite, and Vite React plugin.
+- Expanded README trust signals with CodeQL, release, reviewer, and support links.
+
 ## [0.1.1] - 2026-05-31
 
 ### Added
@@ -9,7 +22,6 @@ All notable changes to this public edition are documented here.
 - Public-safe demo screenshots using synthetic `demo-user` data.
 - Architecture, maintenance, and privacy hygiene documentation.
 - README links to public maintenance docs.
-- Pull request template, CODEOWNERS, and CodeQL workflow for visible review and security maintenance.
 
 ### Changed
 

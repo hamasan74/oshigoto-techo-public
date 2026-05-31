@@ -59,3 +59,4 @@ For each public release:
 - Add regression coverage for local storage and export boundaries.
 - Keep dependency advisories triaged without forcing breaking updates.
 - Document accepted limitations in release notes.
+- Keep reviewer-facing docs current as public workflows evolve.

@@ -11,6 +11,12 @@ It focuses on making daily time entry faster: planned work, actual work, breaks,
 
 This public edition is a sanitized source release. It does not include private databases, worktree operations notes, company-specific setup scripts, generated files, or local helper binaries.
 
+## For Reviewers
+
+- Start here: [docs/reviewer-guide.md](docs/reviewer-guide.md)
+- Local demo path: [docs/local-demo-walkthrough.md](docs/local-demo-walkthrough.md)
+- Public/private data boundary: [docs/privacy.md](docs/privacy.md)
+
 ## Screenshot
 
 The demo screenshots use synthetic local data only.
@@ -39,6 +45,9 @@ This repository is maintained as the public source edition of Oshigoto Techo.
 - Architecture: [docs/architecture.md](docs/architecture.md)
 - Maintenance notes: [docs/maintenance.md](docs/maintenance.md)
 - Privacy and public source hygiene: [docs/privacy.md](docs/privacy.md)
+- Reviewer guide: [docs/reviewer-guide.md](docs/reviewer-guide.md)
+- Local demo walkthrough: [docs/local-demo-walkthrough.md](docs/local-demo-walkthrough.md)
+- Support: [SUPPORT.md](SUPPORT.md)
 - Releases: [GitHub Releases](https://github.com/hamasan74/oshigoto-techo-public/releases)
 - Code scanning: [CodeQL workflow](https://github.com/hamasan74/oshigoto-techo-public/actions/workflows/codeql.yml)
 - Issue triage: bugs, documentation, maintenance, enhancements, and good first issues
