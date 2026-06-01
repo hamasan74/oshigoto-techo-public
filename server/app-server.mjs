@@ -28,7 +28,7 @@ const mimeTypes = {
 const mailHelperDrafts = new Map();
 const mailHelperDraftTtlMs = 15 * 60 * 1000;
 const userPresenceWindowMs = 3 * 60 * 1000;
-const exactTestUserIds = new Set(['admin-e2e-user', 'debug-user']);
+const exactTestUserIds = new Set(['admin-e2e-user', 'debug-user', 'demo-user', 'local-demo-user']);
 const generatedTestUserPrefixes = [
   'annual-day',
   'annual-half',
@@ -88,6 +88,9 @@ const generatedTestUserPrefixes = [
 const generatedTestUserPatterns = generatedTestUserPrefixes.map(
   (prefix) => new RegExp(`^${prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}-\\d{13}-[a-z0-9]{6}$`),
 );
+const workReportCaptureTestUserPatterns = ['capture-work-report', 'debug-work-report'].map(
+  (prefix) => new RegExp(`^${prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}-\\d{13}(?:-[a-z0-9]{6})?$`),
+);
 
 function cleanupMailHelperDrafts(now = Date.now()) {
   for (const [token, draft] of mailHelperDrafts.entries()) {
@@ -124,7 +127,8 @@ function normalizeText(value) {
 function classifyAdminUser(user) {
   const normalizedUserId = normalizeText(user.userId).toLowerCase();
   const isGeneratedTestUser = generatedTestUserPatterns.some((pattern) => pattern.test(normalizedUserId));
-  const isTestUser = exactTestUserIds.has(normalizedUserId) || isGeneratedTestUser;
+  const isWorkReportCaptureTestUser = workReportCaptureTestUserPatterns.some((pattern) => pattern.test(normalizedUserId));
+  const isTestUser = exactTestUserIds.has(normalizedUserId) || isGeneratedTestUser || isWorkReportCaptureTestUser;
 
   return {
     ...user,

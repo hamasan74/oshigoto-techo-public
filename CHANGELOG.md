@@ -2,6 +2,12 @@
 
 All notable changes to this public edition are documented here.
 
+## [0.1.11] - 2026-06-01
+
+### Fixed
+
+- Classified public demo and generated work-report capture accounts as test users in admin summaries.
+
 ## [0.1.10] - 2026-05-31
 
 ### Documentation
