@@ -2,6 +2,12 @@
 
 All notable changes to this public edition are documented here.
 
+## [0.1.13] - 2026-06-04
+
+### Documentation
+
+- Added public maintainer workflow documentation to clarify how the local-first app supports issue triage, release preparation, backups, and public/private source hygiene.
+
 ## [0.1.12] - 2026-06-04
 
 ### Fixed

@@ -11,11 +11,18 @@ It focuses on making daily time entry faster: planned work, actual work, breaks,
 
 This public edition is a sanitized source release. It does not include private databases, worktree operations notes, company-specific setup scripts, generated files, or local helper binaries.
 
+## Why It Matters
+
+Small open-source maintainers often split time across issue triage, pull request review, release preparation, user support, and private operational work. Oshigoto Techo keeps that daily maintenance effort visible in a local-first workflow without pushing private notes or runtime data into a public repository.
+
+The public edition demonstrates both the app and the maintenance boundary around it: source code, release notes, CI, CodeQL, dependency triage, and public-safe documentation are reviewable, while private data and local helper binaries stay out of Git.
+
 ## For Reviewers
 
 - Start here: [docs/reviewer-guide.md](docs/reviewer-guide.md)
 - Local demo path: [docs/local-demo-walkthrough.md](docs/local-demo-walkthrough.md)
 - Public/private data boundary: [docs/privacy.md](docs/privacy.md)
+- Maintainer workflow examples: [docs/maintainer-workflows.md](docs/maintainer-workflows.md)
 
 ## Screenshot
 
@@ -44,6 +51,7 @@ This repository is maintained as the public source edition of Oshigoto Techo.
 - Changelog: [CHANGELOG.md](CHANGELOG.md)
 - Architecture: [docs/architecture.md](docs/architecture.md)
 - Maintenance notes: [docs/maintenance.md](docs/maintenance.md)
+- Maintainer workflows: [docs/maintainer-workflows.md](docs/maintainer-workflows.md)
 - Privacy and public source hygiene: [docs/privacy.md](docs/privacy.md)
 - Reviewer guide: [docs/reviewer-guide.md](docs/reviewer-guide.md)
 - Local demo walkthrough: [docs/local-demo-walkthrough.md](docs/local-demo-walkthrough.md)

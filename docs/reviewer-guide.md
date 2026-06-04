@@ -12,13 +12,16 @@ The public repository is a sanitized source release. It is intended to show the 
 
 Daily work logging often becomes slow because planning, actual time entry, project totals, handoff notes, and exports live in different tools. Oshigoto Techo keeps those workflows close together and stores work data locally by default.
 
+For open-source maintainers, the same pattern applies to daily maintenance work: issue triage, pull request review, release preparation, dependency updates, and support follow-up often happen around GitHub but are not always captured as a private work log. See [maintainer-workflows.md](maintainer-workflows.md) for the public-safe workflow examples this repository is meant to demonstrate.
+
 ## What To Review First
 
 1. [README.md](../README.md) for the feature summary and screenshot.
 2. [docs/architecture.md](architecture.md) for the app shape and data boundary.
 3. [docs/privacy.md](privacy.md) for the public/private source split.
 4. [docs/maintenance.md](maintenance.md) for issue, PR, dependency, and release handling.
-5. [SECURITY.md](../SECURITY.md) for vulnerability and public-source hygiene policy.
+5. [docs/maintainer-workflows.md](maintainer-workflows.md) for local-first maintainer workflow examples.
+6. [SECURITY.md](../SECURITY.md) for vulnerability and public-source hygiene policy.
 
 ## Quick Local Run
 
