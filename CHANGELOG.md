@@ -2,6 +2,12 @@
 
 All notable changes to this public edition are documented here.
 
+## [0.1.12] - 2026-06-04
+
+### Fixed
+
+- Allowed daily time entry ranges to use overnight end times up to `30:00`.
+
 ## [0.1.11] - 2026-06-01
 
 ### Fixed

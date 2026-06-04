@@ -258,7 +258,9 @@ export const categoryLabels: Record<ProjectCategory, string> = {
   indirect: '間接',
 };
 
-export const quarterHourOptions: TimeOption[] = Array.from({ length: 96 }, (_, index) => {
+export const MAX_TIME_INPUT_MINUTES = 30 * 60;
+
+export const quarterHourOptions: TimeOption[] = Array.from({ length: MAX_TIME_INPUT_MINUTES / 15 + 1 }, (_, index) => {
   const hours = String(Math.floor(index / 4)).padStart(2, '0');
   const minutes = String((index % 4) * 15).padStart(2, '0');
   const value = `${hours}:${minutes}`;
@@ -894,11 +896,12 @@ export function toTimeMinutes(value: string) {
 
   const hours = Number(matched[1]);
   const minutes = Number(matched[2]);
-  if (Number.isNaN(hours) || Number.isNaN(minutes) || hours > 23 || minutes > 59) {
+  const totalMinutes = hours * 60 + minutes;
+  if (Number.isNaN(hours) || Number.isNaN(minutes) || minutes > 59 || totalMinutes > MAX_TIME_INPUT_MINUTES) {
     return null;
   }
 
-  return hours * 60 + minutes;
+  return totalMinutes;
 }
 
 export function isQuarterHourTime(value: string) {
@@ -1142,7 +1145,7 @@ export function stepTimeValue(value: string, deltaMinutes: number, fallbackValue
     return fallbackValue;
   }
 
-  const nextMinutes = Math.max(0, Math.min(23 * 60 + 45, baseMinutes + deltaMinutes));
+  const nextMinutes = Math.max(0, Math.min(MAX_TIME_INPUT_MINUTES, baseMinutes + deltaMinutes));
   const roundedMinutes = roundToQuarter(nextMinutes);
   const hours = String(Math.floor(roundedMinutes / 60)).padStart(2, '0');
   const minutes = String(roundedMinutes % 60).padStart(2, '0');
@@ -1164,10 +1167,10 @@ export function stepTimeValueExcludingLunch(
   const roundedBaseMinutes = roundToQuarter(baseMinutes);
   const direction = deltaMinutes >= 0 ? 1 : -1;
   let cursor = roundedBaseMinutes;
-  let remaining = Math.min(23 * 60 + 45, Math.abs(deltaMinutes));
+  let remaining = Math.min(MAX_TIME_INPUT_MINUTES, Math.abs(deltaMinutes));
   const lunchRange = getLunchRange(lunchMinutes);
 
-  while (remaining > 0 && cursor >= 0 && cursor <= 23 * 60 + 45) {
+  while (remaining > 0 && cursor >= 0 && cursor <= MAX_TIME_INPUT_MINUTES) {
     if (lunchRange) {
       if (direction > 0 && cursor >= lunchRange.start && cursor < lunchRange.end) {
         cursor = lunchRange.end;
@@ -1180,7 +1183,7 @@ export function stepTimeValueExcludingLunch(
       }
     }
 
-    const nextCursor = Math.max(0, Math.min(23 * 60 + 45, cursor + direction * 15));
+    const nextCursor = Math.max(0, Math.min(MAX_TIME_INPUT_MINUTES, cursor + direction * 15));
     if (nextCursor === cursor) {
       break;
     }
@@ -1267,7 +1270,7 @@ export function inferSummaryTimeRange(
   }
 
   const endMinutes = startMinutes + targetMinutes;
-  if (endMinutes > 23 * 60 + 45) {
+  if (endMinutes > MAX_TIME_INPUT_MINUTES) {
     return {
       startTime: '',
       endTime: '',
