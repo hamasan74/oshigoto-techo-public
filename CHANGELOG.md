@@ -2,6 +2,12 @@
 
 All notable changes to this public edition are documented here.
 
+## [0.1.14] - 2026-06-16
+
+### Changed
+
+- Merged the reviewed Dependabot patch updates for React, React DOM, React typings, and Vite.
+
 ## [0.1.13] - 2026-06-04
 
 ### Documentation
