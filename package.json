@@ -23,7 +23,7 @@
     "@duckdb/node-api": "^1.5.1-r.2",
     "exceljs": "^4.4.0",
     "jszip": "^3.10.1",
-    "react": "^19.2.7",
+    "react": "^19.2.8",
     "react-dom": "^19.2.7"
   },
   "devDependencies": {
